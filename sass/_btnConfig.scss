@@ -36,3 +36,17 @@
 .link{
   @extend %link
 }
+
+%alt-link{
+  color: rgb(87, 83, 83);
+  text-decoration: none;
+ 
+  &:hover{
+    color: black;
+    text-decoration: underline;
+  }
+}
+
+.alt-link{
+  @extend %alt-link
+}

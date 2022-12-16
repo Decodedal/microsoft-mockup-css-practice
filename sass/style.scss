@@ -15,18 +15,37 @@
   }
 
   nav{
-    @include flexbox(row , space-around , center);
+    @include flexbox(row , flex-start, center);
 
-    width: 50%;
+    width: 100%;
 
     li{
       list-style-type: none;
     }
+
+
+
+    .nav-links{
+      @include flexbox(row, space-around, center);
+      width:50%;
+
+      @media only screen and (max-width: 800px){
+        width:100%
+      
+    }
+    @media only screen and (max-width: 550px){
+      display: none;
+    
   }
+    }
+
+  }
+
+
 
   #heading{
     @include divset(100%, 10vh);
-    background-color:$header-color;
+    background-color:$secondary-color;
     text-align: center;
     color: $background-color;
     @include flexbox(row , center, center);
@@ -39,12 +58,15 @@
 
   .hero{
     @include flexbox(row, center, center);
+    @media only screen and (max-width: 600px){
+      @include flexbox(column, center, center);  
+      
+    }
 
     &-child{
         width: 50%;
         @media only screen and (max-width: 600px){
-          @include flexbox(column, center, center);  
-          
+          width: 100%;
         }
     }
 
@@ -53,9 +75,13 @@
   #hero-text{
     @include flexbox(column, center, center);
     width: 50%;
+    padding: 1rem;
      
     p{
-      width:50%
+      width:50%;
+      @media only screen and (max-width: 600px){
+        width: 100%;
+      }
     }
   }
 
@@ -79,20 +105,64 @@
 }
 
 .grid-container{
-  background-color: red;
+  background-color: $softer-red;
   margin: 0;  
-  @include divset(60%, 100%);
-  @include set-grid(4, 2rem);
+  @include divset(90%, 100%);
+  @include set-grid(4, 3rem);
+  @media only screen and (max-width: 800px){
+    @include set-grid(2,3rem);   
+    
+  }
+  @media only screen and (max-width: 600px){
+    @include set-grid(1,2rem);   
+    
+  }
   
   .grid-child{
-    width: 15%;
+    width: 100%;
     text-align: center;
+    background-color: $background-color;
+    border-radius: 5%;
+    padding: 1rem;
+    aspect-ratio: 1;
 
     img{
-      width:100%
+      width:100%;
+      border-radius: 5%;
+      padding: 1rem;
       
     }
 
   }
 }
+
+.center{
+  @include flexbox(row, center, center);
+  padding: 5rem;
+  background-color: $softer-red;
+ }
+
+ footer{
+  @include set-grid(5, 5rem);
+  min-height: 40vh;
+  background-color: $footer-color;
+  padding-top: 4rem;
+  @media only screen and (max-width: 800px){
+    @include set-grid(3,3rem);   
+    
+  }
+  @media only screen and (max-width: 600px){
+    @include set-grid(1,2rem);   
+    
+  }
+li{
+    list-style-type: none;
+    padding: .6rem;
+    text-align: center;
+  }
+
+  h4{
+    text-align: center;
+  }
+ }
 

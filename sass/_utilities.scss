@@ -24,6 +24,12 @@
     width: $width;
     height:$height;
   }
+
+  @mixin set-grid($num, $gap){
+    display: grid;
+    grid-template-columns: repeat($num, 1fr);
+    gap:$gap;
+  }
   
   // Standard CSS
   .box {
@@ -33,3 +39,4 @@
     overflow: auto;
   }
   
+ 

@@ -11,6 +11,7 @@
   body{
     background-color: $background-color;
     color: $font-color;
+    font-family: $font;
   }
 
   nav{
@@ -41,6 +42,10 @@
 
     &-child{
         width: 50%;
+        @media only screen and (max-width: 600px){
+          @include flexbox(column, center, center);  
+          
+        }
     }
 
   }
@@ -53,3 +58,41 @@
       width:50%
     }
   }
+
+  .icons-container{
+    @include set-grid(6,.1rem);
+    @media only screen and (max-width: 800px){
+      @include set-grid(3,.1rem);
+    }
+    @media only screen and (max-width: 600px){
+      @include set-grid(1,1rem);   
+      
+    }
+    // @include flexbox(row, space-evenly, center);
+  // background-color:red;
+   padding: 2rem;
+
+  .icon{
+    @include flexbox(column, center, center);
+    text-align: center; 
+  }
+}
+
+.grid-container{
+  background-color: red;
+  margin: 0;  
+  @include divset(60%, 100%);
+  @include set-grid(4, 2rem);
+  
+  .grid-child{
+    width: 15%;
+    text-align: center;
+
+    img{
+      width:100%
+      
+    }
+
+  }
+}
+

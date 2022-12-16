@@ -49,6 +49,7 @@
 body {
   background-color: #fff;
   color: black;
+  font-family: helvetica, sans-serif;
 }
 
 nav {
@@ -87,6 +88,14 @@ nav li {
 .hero-child {
   width: 50%;
 }
+@media only screen and (max-width: 600px) {
+  .hero-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
 
 #hero-text {
   display: flex;
@@ -97,4 +106,49 @@ nav li {
 }
 #hero-text p {
   width: 50%;
+}
+
+.icons-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.1rem;
+  padding: 2rem;
+}
+@media only screen and (max-width: 800px) {
+  .icons-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.1rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .icons-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+  }
+}
+.icons-container .icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.grid-container {
+  background-color: red;
+  margin: 0;
+  width: 60%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+.grid-container .grid-child {
+  width: 15%;
+  text-align: center;
+}
+.grid-container .grid-child img {
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */

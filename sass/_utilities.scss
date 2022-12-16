@@ -20,8 +20,9 @@
     align-items: $align;
   }
 
-  @mixin iconBox(){
-    
+  @mixin divset($width, $height){
+    width: $width;
+    height:$height;
   }
   
   // Standard CSS

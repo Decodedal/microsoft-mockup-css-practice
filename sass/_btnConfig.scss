@@ -13,6 +13,14 @@
   }
 }
 
+%link{
+  text-decoration: none;
+
+  &:hover{
+    color:red;
+    transform: scale(105%)
+  }
+}
 
 
 .btn-primary {
@@ -23,4 +31,8 @@
 .btn-secondary {
   @extend %btn;
   @include set-bg($secondary-color);
+}
+
+.link{
+  @extend %link
 }

@@ -5,25 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Microsoft mock</title>
-    <link rel="stylesheet" href="styles.css">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link rel="stylesheet" href="./sass/style.css"/>
     <script src="./script.js" defer></script>
 </head>
 <body>
     <nav>
         <li><img alt="microsoft logo" src="./public/imgs/micro.png"></li>
-        <li>Xbox</li>
-        <li>Teams</li>
-        <li>small buisness</li>
-        <li>support</li>
+        <li class="link">Xbox</li>
+        <li class="link">Teams</li>
+        <li class="link">small buisness</li>
+        <li class="link">support</li>
     </nav>
-    <h2 id="heading">Flexable Payment options that start at 0% APR <span id="arrow">></span></h2>
+    <div id="heading">
+        <h2>Flexable Payment options that start at 0% APR ➡</h2>
+        </div>
     <div class="hero">
-        <img class="hero-img" src= "https://th.bing.com/th/id/R.d3385fd58af8e15fb4ef5b71fd790608?rik=m9emNiMNIX3Yng&pid=ImgRaw&r=0" alt="some laptops">
-        <div class="hero-text">
+        <img class="hero-child" class="hero-img" src= "https://th.bing.com/th/id/R.d3385fd58af8e15fb4ef5b71fd790608?rik=m9emNiMNIX3Yng&pid=ImgRaw&r=0" alt="some laptops">
+        <div class="hero-child" id="hero-text">
             <h3>Surface Pro 9</h3>
             <p>Tablet versatility and laptop power — all in one ultra-portable device. If you have questions before you buy, chat with a product expert.</p>
-            <button>Pre-order now</button>
-            <a href="#">Book an online appointment ></a>
+            <button class="btn-primary">Pre-order now</button>
+            <a class="link" href="#">Book an online appointment</a>
         </div>
     </div>
     <div class="icons-container">

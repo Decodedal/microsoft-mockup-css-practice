@@ -1,0 +1,55 @@
+@import "btnConfig";
+@import "utilities";
+@import "config";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body{
+    background-color: $background-color;
+    color: $font-color;
+  }
+
+  nav{
+    @include flexbox(row , space-around , center);
+
+    width: 50%;
+
+    li{
+      list-style-type: none;
+    }
+  }
+
+  #heading{
+    @include divset(100%, 10vh);
+    background-color:$header-color;
+    text-align: center;
+    color: $background-color;
+    @include flexbox(row , center, center);
+    
+    h2:hover{
+      transform: scale(110%);
+      color: bisque;
+    }
+  }
+
+  .hero{
+    @include flexbox(row, center, center);
+
+    &-child{
+        width: 50%;
+    }
+
+  }
+
+  #hero-text{
+    @include flexbox(column, center, center);
+    width: 50%;
+     
+    p{
+      width:50%
+    }
+  }
